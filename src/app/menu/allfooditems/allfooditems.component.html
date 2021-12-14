@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<br><br>
+<div class="row" >
+<div class="card" *ngFor="let item of allfooditems | searchfilter: searchKey:'name'" >
+    <img
+      src= '{{ item.imgurl }}'
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">
+        {{ item.description }} &nbsp; <a routerLink="/fooddetails/{{item.id}}" class="card-link">More Details</a>
+      </p>
+    </div>
+  </div>
+</div>

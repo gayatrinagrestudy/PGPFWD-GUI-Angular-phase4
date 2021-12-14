@@ -1,0 +1,60 @@
+<div class="header">
+    <figure class="figure">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyCAYTy615RbKG90njxuxoa0q5WKSRoZ0I4w&usqp=CAU"
+        class="figure-img img-fluid rounded shadow-3 mb-1"
+        alt="..."
+      />
+    </figure>
+    <figure class="figure">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMCt8VoZKuYZVP4B43stY3EPvWsj-r-ByyuA&usqp=CAU"
+        class="figure-img img-fluid rounded shadow-3 mb-1"
+        alt="..."
+      />
+    </figure>
+    
+    <figure class="figure">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyCAYTy615RbKG90njxuxoa0q5WKSRoZ0I4w&usqp=CAU"
+        class="figure-img img-fluid rounded shadow-3 mb-1"
+        alt="..."
+      />
+    </figure>
+  </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link" routerLink="/home">Home</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link" routerLink="/allitems">Food Items</a>
+            </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="#">Contact</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="#">About</a>
+          </li>
+          <li class="nav-item leftmargincheckout" routerLinkActive="active">
+            <a class="nav-link" aria-current="page" routerLink="/checkout">Check Out</a>
+          </li>
+          
+            <li class="nav-item leftmarginlogout" routerLinkActive="active">
+              <a class="nav-link" aria-current="page" routerLink="/home">Logout</a>
+            </li>
+          </ul>
+          <div class="form-group">
+            <input class="form-control" type="search" [(ngModel)] ="searchTerm" (keyup)="search($event)" placeholder="Search" aria-label="Search">
+          </div>
+         
+        </div>
+      </div>
+    </nav>

@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<br><br>
+<div class="card mb-3" style="max-width: 940px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          src='{{ fooditem.imgurl }}'
+          alt="..."
+          class="img-fluid"
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"><strong>{{fooditem.name}}</strong></h5>
+          <p class="card-text">
+            <strong>Price:</strong> Rs. {{fooditem.price}} /- <br>
+            <strong>Ingredients:</strong> Refine floor, cheese,
+            Broccolini or broccoli (blanch first) and pancetta/speck/bacon.
+            Potato, sausage, pancetta/speck/bacon.
+            Gorgonzola and mushroom.
+            Black olives, anchovies, capers.
+            Gorgonzola, radicchio.
+            Capers, anchovies, eggplant, capsicum.
+            Mixed sliced mushrooms and garlic
+          </p>
+           <p>
+            <small>
+              <button mdbRipple type="button" class="btn btn-warning btn-rounded" (click) = "addToCart()">Add</button> &nbsp;&nbsp;&nbsp;
+                 {{ qtyAddedToCart }} &nbsp;&nbsp;&nbsp;
+                 <button mdbRipple type="button" class="btn btn-warning btn-rounded" (click) = "removeFromCart()">Remove</button>
+                </small>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+  </div>

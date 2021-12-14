@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid cart-bg">
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive"  style="margin-top: 55px;">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"> </th>
+                            <th class="font-white" scope="col">Product</th>
+                            <th scope="col" class="text-center font-white">Quantity</th>
+                            <th scope="col" class="text-right font-white">Price</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-template ngFor let-item [ngForOf]="cartItems">
+                            <tr>
+                                <td><img class="img-responsive" style="height: 50px; width: 50px;" src='{{ item.imgurl }}' /> </td>
+                                <td class="font-white">{{item.title}}</td>
+                                <td><input class="form-control" [value]="item.qty" type="number" (change)="valueChanged(item, $event)" /></td>
+                                <td class="text-right font-white">{{item.price | currency:'INR'}}</td>
+                                
+                            </tr>
+                        </ng-template>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="font-white">Sub-Total</td>
+                            <td class="text-right font-white">{{cart.getTotalItemByProp('price') | currency:'INR'}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong class="font-white">Total</strong></td>
+                            <td class="text-right font-white"><strong>{{cart.getTotalItemByProp('price') | currency:'INR'}}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="paytbutton">
+                    <div *ngIf="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>{{ paymentmessage }}</strong>
+                    </div>
+                <button mdbRipple type="button" class="btn btn-warning btn-rounded" (click) = "payment()">Payment</button>
+            </div> 
+            <br><br>
+            </div>
+        </div>
+    </div>
+</div>
